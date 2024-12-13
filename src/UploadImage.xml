@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="rd.uploadimage.UploadImage"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Native"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Upload Image</name>
+    <description>My widget description</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="General">
+            <property key="Base64" type="attribute" onChange="onBase64Change" required="true">
+                <caption>Base64</caption>
+                <description>This attribute will receive the Base64 data of file</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+
+            <property key="Type" type="attribute" required="false">
+                <caption>Type</caption>
+                <description>This attribute will receive the Type of file</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+            <property key="qual" type="attribute" required="false">
+                <caption>File Quality</caption>
+                <description>This attribute will give the Quality of file</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+
+            <property key="onBase64Change" type="action">
+                <caption>On change</caption>
+                <description />
+            </property>
+
+            <property key="logoUpload" type="image" required="true">
+                <caption>Upload Logo</caption>
+                <description>Select the Image For Upload Image</description>
+            </property>
+
+            <property key="logoCamera" type="image" required="true">
+                <caption>Camera Logo</caption>
+                <description>Select the Image For Take Picture</description>
+            </property>
+            <property key="fileUpload" type="image" required="true">
+                <caption>Upload Logo from files</caption>
+                <description>Select the Svg Image For Upload from files</description>
+            </property>
+
+            <property key="galleryupload" type="image" required="true">
+                <caption>Upload Logo from Gallery</caption>
+                <description>Select the  Svg Image For Upload from gallery</description>
+            </property>
+            <property key="allowPdf" type="boolean" defaultValue="false">
+                <caption>Allow Pdf</caption>
+                <description>If Allow pdf is set to true you can select pdf and images</description>
+            </property>
+            <property key="onlyimage" type="boolean" defaultValue="false">
+                <caption>onlyimage</caption>
+                <description>If onlyimage is set to true you can select only images</description>
+            </property>
+            <property key="allowInvoice" type="boolean" defaultValue="false">
+                <caption>Allow Invoice</caption>
+                <description>If Allow Invoice is set to true you can select image from only camera</description>
+            </property>
+            <property key="logoInvoice" type="image" required="false">
+                <caption>Invoice Logo</caption>
+                <description>Select the Image For Invoice Take Picture</description>
+            </property>
+            <property key="containerWidth" type="integer" defaultValue="50">
+                <caption>Container Width</caption>
+                <description>Container width</description>
+            </property>
+            <property key="containerHeight" type="integer" defaultValue="50">
+                <caption>Container Height</caption>
+                <description>Container Height</description>
+            </property>
+            <property key="fileSize" type="integer" defaultValue="20">
+                <caption>File Size</caption>
+                <description>Maximum File Size in MB</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
